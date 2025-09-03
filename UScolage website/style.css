@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header contact information  */
+.header-contact-info{
+   
+    background-color: #fdd835;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px ;
+    gap: 20px;
+}
+.header-contact-info a{
+    text-decoration: none;
+    font-size: 35px;
+      color: #4a148c;
+}
+.header-contact-info i{
+  color: #4a148c;
+}
+/* header logo alingment  */
+.header-logo{
+    padding: 10px 0px 0px 90px ;
+}
+/* banner alingmnet  */
+.banner-image-overlay{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+     background-image: url(img/0/top-banner.png) ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+     width: 100%;  
+}
+.banner-content{
+      width:50%;    
+    padding: 0px 0px 0px 30px ;
+}
+.banner-content h1{
+      color: #4a148c;
+      font-size: 6rem; 
+}
+.banner-content button{
+   background-color: #fdd835;
+   border: none;
+   border-radius: 40px;
+   box-shadow: 5px 5px 5px rgb(201, 201, 201);
+   padding: 10px 60px ;
+   font-size: 45px;
+   font-weight: 700;
+   margin-top: 50px;
+
+}
+.hidden-image{
+    display: none;
+}
+@media (max-width:768px) {
+    .header-contact-info a{
+        display: none;
+    }
+    .header-logo{
+        padding: 0px;
+       display: flex;
+       justify-content: center;
+       
+    }
+    .header-logo img{
+        width: 300px;
+    }
+    .banner-image-overlay{
+        background: none;
+        height: 0%;
+         justify-content: center;   
+    text-align: center;        
+    padding: 20px;
+    }
+    .banner-content{
+        margin-top: 50px;
+      width:100%; 
+       padding: 0;    
+    
+}
+.banner-content h1{
+      color: #4a148c;
+      font-size: 3rem; 
+}
+.banner-content button{
+     padding: 10px 40px ;
+   font-size: 25px;
+   font-weight: 900;
+   margin-top: 30px;
+
+}
+
+.hidden-image{
+    margin-top: 30px;
+   display:flex;
+   justify-content: center;
+   align-items: center; 
+}
+}
+/* section two  */
+.addmision-section{
+    display: flex;
+  flex-direction: column;   
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;       
+  padding: 20px;
+}
+.addmision-section h2{
+     color: #4a148c;
+}
+.addmision-section h2 span{
+      color: #fdd835;
+}
+.voilet-to-yellow{
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+    margin: auto;
+    background: linear-gradient(to right, #4a148c,#fdd835 );
+}
