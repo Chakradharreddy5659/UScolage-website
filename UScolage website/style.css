@@ -66,7 +66,7 @@
 }
 
 .header-contact-info a {
-    font-family: 'Neo Sans Pro Regular';
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-size: 35px;
     color: #4a148c;
@@ -95,7 +95,7 @@
 
 .banner-content {
     font-family: 'Neo Sans Pro Regular';
-    width: 50%;
+    max-width: 50%;
     padding: 0px 0px 0px 30px;
 }
 
@@ -139,28 +139,24 @@
 
     .banner-image-overlay {
         background: none;
-        min-height: 0%;
+        min-height: 400px;
         justify-content: center;
         text-align: center;
-        padding: 20px;
+        padding: 0 20px;
     }
 
     .banner-content {
-        max-width: 55%;
-        padding: 0 10px;
-        text-align: center;
+        max-width: 80%;
+        padding: 0;
     }
 
     .banner-content h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .banner-content button {
+        font-size: 28px;
         padding: 10px 40px;
-        font-size: 25px;
-        font-weight: 900;
-        margin-top: 30px;
-
     }
 
     .hidden-image {
@@ -178,13 +174,27 @@
 
     }
 
+    .banner-image-overlay {
+        min-height: 300px;
+        justify-content: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+
     .banner-content {
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .banner-content h1 {
         font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .banner-content button {
+        font-size: 20px;
+        padding: 8px 30px;
+        margin-top: 30px;
     }
 }
 
@@ -233,6 +243,7 @@
 }
 
 .addmision-section p {
+    font-family: 'Neo Sans Pro Regular';
     font-size: 2.7rem;
     color: #333;
     max-width: 60%;
@@ -241,33 +252,37 @@
 }
 
 /* section two grid layout  */
-.flex-layout {
-    display: flex;
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 2fr));
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
-
+    max-width: 80%;
 }
 
-.flex-content {
-    max-width: 600px;
+.grid-content {
     background-color: #fdd835;
     text-align: center;
-    padding: 20px 80px;
-
-
+    padding: 20px 40px;
 }
 
-.flex-layout p {
-
-    padding: 0px 40px;
-    font-size: 30px;
-    line-height: 1.6;
+.grid-content img {
+    max-width: 120px;
+    margin-bottom: 15px;
 }
+
+.grid-content p {
+    font-family: 'Neo Sans Pro Regular';
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+}
+
 
 /* register offer  */
 .register-offer {
-    margin: 50px 0px;
+    margin: 50px 0;
     background-color: #4a148c;
     color: #fdd835;
     padding: 20px 60px;
@@ -276,28 +291,26 @@
 }
 
 .register-offer h4 {
+
     font-size: 3.3rem;
+    margin: 0;
 }
 
 .register-offer p {
+    font-family: 'Neo Sans Pro Regular';
     font-size: 2.5rem;
+    margin: 10px 0 0;
 }
 
 /* tablet  */
 @media (max-width: 768px) {
-    .flex-layout {
-        align-items: center;
-        flex-wrap: nowrap;
+    .grid-layout {
+        grid-template-columns: repeat(1, 1fr);
+
     }
 
-    .flex-content {
-        max-width: 300px;
-        flex-wrap: nowrap;
-    }
-
-    .flex-layout p {
-        padding: 0px;
-        font-size: 16px;
+    .grid-content p {
+        font-size: 20px;
     }
 
     .addmision-section h2 {
@@ -305,7 +318,20 @@
     }
 
     .addmision-section p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        max-width: 70%;
+    }
+
+    .register-offer {
+        padding: 15px 30px;
+    }
+
+    .register-offer h4 {
+        font-size: 2.5rem;
+    }
+
+    .register-offer p {
+        font-size: 2rem;
     }
 }
 
@@ -320,37 +346,30 @@
         font-size: 1.5rem;
     }
 
-    .addmision-section p {
-        font-size: 1rem;
+
+    .grid-layout {
+        grid-template-columns: 1fr;
     }
 
-    .flex-layout {
-        flex-direction: column;
+    .grid-content {
+        padding: 20px;
     }
 
-    .flex-layout p {
-        font-size: 14px;
-        line-height: 1.4;
+    .grid-content p {
+        font-size: 18px;
     }
 
     .register-offer {
-        margin: 0px;
-        background-color: #4a148c;
-        color: #fdd835;
-        width: 350px;
-        padding: 20px 60px;
-        text-align: center;
-        border-radius: 20px;
+        padding: 15px 20px;
     }
 
     .register-offer h4 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .register-offer p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
-
 }
 
 /* section three  */
@@ -373,6 +392,7 @@
 }
 
 .lighter-text {
+    font-family: 'Neo Sans Pro Regular';
     margin: 40px 0px;
     color: #4a148c;
     max-width: 1200px;
@@ -397,7 +417,12 @@
     margin-bottom: 15px;
 }
 
+.feature-box h3 {
+    font-family: 'Neo Sans Pro Regular';
+}
+
 .feature-box p {
+    font-family: 'Neo Sans Pro Regular';
     padding: 0px 25px;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -416,6 +441,7 @@
 
     .grid-features {
         grid-template-columns: repeat(2, 1fr);
+
 
     }
 
@@ -491,10 +517,11 @@
 }
 
 .bold-purple {
+    font-family: 'Neo Sans Pro Regular';
     font-size: 2.5rem;
     color: #4a148c;
     font-weight: bold;
-    padding: 0px 80px;
+    padding: 0px 30px;
 }
 
 .steps-yellow-content {
@@ -504,12 +531,18 @@
     background-color: #ecd362;
 }
 
+.steps-yellow-content>p {
+    text-align: right;
+
+}
+
 .lighter-text-black {
+    font-family: 'Neo Sans Pro Regular';
     margin: 30px 0px;
     padding: 0px 30px;
     color: #020202;
     max-width: 1200px;
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
 }
 
@@ -583,6 +616,7 @@
     }
 
     .lighter-text-black {
+        font-size: 1.5rem;
         margin: 10px 0px;
         padding: 0px 20px;
     }
@@ -590,12 +624,18 @@
     .steps-yellow-content,
     .steps-content {
         max-width: 495px;
+        margin-top: -5px;
     }
 
     .features-section {
         flex-direction: column;
         align-items: center;
     }
+
+    .bold-purple {
+        font-size: 2rem;
+    }
+
 }
 
 @media (max-width:575px) {
@@ -609,6 +649,7 @@
     .steps-content,
     .steps-yellow-content {
         text-align: center;
+        margin-top: -5px;
     }
 
     .lighter-text-black {
@@ -694,6 +735,7 @@
 }
 
 .story-content p {
+    font-family: 'Neo Sans Pro Regular';
     font-size: 1.8rem;
     color: #4a148c;
     line-height: 1.6;
@@ -792,6 +834,11 @@ form {
 
 }
 
+input::placeholder,
+select::placeholder {
+    color: #020202;
+}
+
 select,
 input[type] {
     background-color: #dfdfdf;
@@ -799,7 +846,6 @@ input[type] {
     outline: none;
     border-radius: 10px;
     font-size: 25px;
-    color: #020202;
     line-height: 1.6px;
     padding: 20px;
     margin: 15px 0px;
@@ -858,17 +904,11 @@ input[type]:hover {
 
     .form-note p {
         font-size: 15px;
-
     }
 
     .form-note button {
-
         font-size: 30px;
-
-
     }
-
-
 }
 
 @media (max-width:768px) {
@@ -876,3 +916,4 @@ input[type]:hover {
         max-width: 80%;
         margin-bottom: 50px;
     }
+}
